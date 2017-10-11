@@ -1,19 +1,26 @@
+// on the topic of functions
 
-// while loop
+// defined a function "SayHello"
+// - SayHello does not produce an output 
+//(we cannot store its output to a variable)
 
-var increment:Int = 0
-
-while( increment < 11 )
+func SayHello()
 {
-	print( "my increment is \(increment)")
-	increment = increment + 1
+	print( "hello")
 }
 
-print( "\n\n\nnow using repeat while\n\n\n")
-increment = 0
-repeat
-// repeat while loop is equivalent to a do-while in (java, C#, C++)
+// a functioncan take multiple inputs
+// inputs shall not use the var keyword
+// only one output is possible for functions
+func AddIntegers( i1:Int, i2:Int) -> Int
 {
-	print( "my increment is \(increment)")
-	increment = increment + 1
-} while increment < 11
+	let output:Int = i1 + i2
+	return output
+}
+// explicit call to the function SayHello
+SayHello()
+
+// we store the result produced by Addintegers 
+// inside a variable created outside of the function
+var outlet:Int = AddIntegers( i1:1, i2:2)
+print( "\(outlet)")
